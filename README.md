@@ -11,7 +11,7 @@ from xjetsync import pyxJet
 api = pyxJet(
     api_key="API_KEY",
     private_key="PRIVATE_KEY", 
-    mainnet=xJetNet.TESTNET # or xJetNet.MAINNET
+    mainnet=False
 )
 ```
 
