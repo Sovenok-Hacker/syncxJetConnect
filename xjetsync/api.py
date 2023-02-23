@@ -11,19 +11,19 @@ class Account:
     
     """
     
-    async def me(self):
+    def me(self):
         """ Get information about API application. """
         return self.request(method = 'account.me')
 
-    async def balance(self):
+    def balance(self):
         """ Get balance """
         return self.request(method = 'account.balances')
 
-    async def submit_deposit(self):
+    def submit_deposit(self):
         """ Check for deposit """
         return self.request(method = 'account.submitDeposit')
 
-    async def withdraw(self, ton_address: str, currency: str, amount: float):
+    def withdraw(self, ton_address: str, currency: str, amount: float):
         """ Withdraw funds 
         
         :param `ton_address` [str]: TON address
@@ -51,7 +51,7 @@ class Cheques:
     
     """
 
-    async def cheque_create(self, currency: str, amount: int, expires: int = None, description: str = '', activates_count: int = 1, groups_id: list = None, personal_id: str = None, password: str = None, **kwargs):
+    def cheque_create(self, currency: str, amount: int, expires: int = None, description: str = '', activates_count: int = 1, groups_id: list = None, personal_id: str = None, password: str = None, **kwargs):
         """ Create cheques 
         
         :param `currency` [str]: Currency of cheque
