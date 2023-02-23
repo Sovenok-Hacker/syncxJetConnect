@@ -54,7 +54,7 @@ class pyxJet(Account, Cheques, Invoices):
         if 'query_id' not in message: 
             message['query_id'] = int(time.time() + 60) << 16 
 
-        message['signature'] = SigningKey(self.private_key).sign(
+        message['signature'] = SigningKey(bytes.fromhex(self.private_key)).sign(
             json.dumps(message).encode()
         )._signature.hex()
 
