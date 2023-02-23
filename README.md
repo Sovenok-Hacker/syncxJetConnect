@@ -39,4 +39,4 @@ api.invoice_list() # get invoices on account
 ```
 
 ## License
-[GNUv3](https://github.com/Sovenok-Hacker/syncxJetConnect/blob/main/LICENSE)  
+[GNUv3](https://github.com/Sovenok-Hacker/syncxJetConnect/blob/master/LICENSE)  
