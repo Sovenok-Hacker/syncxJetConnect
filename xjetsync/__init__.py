@@ -36,7 +36,7 @@ class pyxJet(Account, Cheques, Invoices):
         :param `method` [str]: Method of API
         :param `*kwargs`: Other params
         """
-        request = await self.client.request(
+        request = self.client.request(
             method = "POST",
             url = self.host + "/" + method.replace('/', ''),
             **kwargs
