@@ -1,13 +1,9 @@
-from xjetpy import pyxJet
-from xjetpy.constants import xJetNet
-import asyncio
-import json
-
+from xjetxync import pyxJet
 
 api = pyxJet(
     api_key="API_KEY",
     private_key="PRIVATE_KEY", 
-    mainnet=False
+    mainnet=True
 )
 
 
@@ -39,6 +35,3 @@ api.cheque_cancel(cheque_id) # delete cheque
 api.invoice_create(currency, amount, description, max_payments) # create invoice
 api.invoice_status(invoice_id) # get invoice status
 api.invoice_list() # get invoices on account
-
-
-asyncio.run(main())
